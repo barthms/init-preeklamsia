@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent   # = proyek-DASI-DALIS/
+BASE_DIR = Path(__file__).resolve().parent.parent   # root/
 CSV_PATH = BASE_DIR / "dataset" / "dummy" / "dataset_sintetis_preeklamsia_1000_bersih_tanpa_null.csv"
 # CSV_PATH = "../dataset/dummy/dataset_sintetis_preeklamsia_1000_bersih_tanpa_null.csv"
 PLACEHOLDER = ["TIDAK_DIPERIKSA", "BELUM_DINILAI", "TIDAK_ADA", "TIDAK_BERLAKU"]
