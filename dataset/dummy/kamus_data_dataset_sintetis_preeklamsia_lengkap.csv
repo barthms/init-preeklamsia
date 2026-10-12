@@ -1,0 +1,133 @@
+﻿feature,kelompok_data,tipe_data,penjelasan
+data_type,Metadata,VARCHAR,"Penanda bahwa seluruh data pada file ini adalah data sintetis, bukan data pasien nyata."
+record_id,Metadata,VARCHAR,ID unik setiap baris/record kunjungan.
+facility_id,Fasilitas,VARCHAR,ID fasilitas kesehatan pada kunjungan.
+facility_name,Fasilitas,VARCHAR,Nama fasilitas sintetis.
+facility_type,Fasilitas,CATEGORY,Puskesmas atau Rumah Sakit.
+patient_id,Identitas Ibu,VARCHAR,ID internal ibu.
+patient_code,Identitas Ibu,VARCHAR,Kode anonim ibu.
+date_of_birth,Demografi,DATE,Tanggal lahir ibu.
+maternal_age,Demografi - turunan,INTEGER,Usia ibu pada tanggal kunjungan.
+domicile_district,Demografi,CATEGORY,Kecamatan domisili sintetis.
+education_level,Demografi opsional,CATEGORY,Pendidikan terakhir.
+occupation,Demografi opsional,CATEGORY,Pekerjaan ibu.
+socioeconomic_status,Demografi opsional,CATEGORY,Kategori sintetis untuk uji dashboard; perlu definisi operasional jika dipakai pada data nyata.
+height_cm,Antropometri,DECIMAL,Tinggi badan ibu.
+pregnancy_id,Kehamilan,VARCHAR,ID episode kehamilan.
+lmp_date,Kehamilan,DATE,HPHT sintetis.
+estimated_due_date,Kehamilan - turunan,DATE,HPL sintetis.
+prepregnancy_weight_kg,Antropometri,DECIMAL,Berat badan sebelum hamil.
+prepregnancy_bmi,Antropometri - turunan,DECIMAL,IMT sebelum hamil.
+multiple_pregnancy_type,Kehamilan,CATEGORY,Tunggal atau Kembar 2.
+conception_method,Kehamilan,CATEGORY,Alami atau teknologi reproduksi berbantu.
+new_partner_pregnancy,Kehamilan,CATEGORY,Kehamilan multipara dengan pasangan baru jika relevan.
+gravida,Riwayat Obstetri,INTEGER,Jumlah kehamilan termasuk saat ini.
+parity,Riwayat Obstetri,INTEGER,Jumlah persalinan sebelumnya.
+nulliparous_status,Riwayat Obstetri - turunan,BOOLEAN,Ditentukan dari parity.
+abortion_count,Riwayat Obstetri,INTEGER,Jumlah riwayat abortus.
+previous_delivery_date,Riwayat Obstetri,DATE,Tanggal persalinan sebelumnya jika ada.
+interpregnancy_interval_years,Riwayat Obstetri - turunan,DECIMAL,Jarak kehamilan dalam tahun.
+previous_preeclampsia,Riwayat Risiko,BOOLEAN,Riwayat preeklamsia sebelumnya.
+family_history_preeclampsia,Riwayat Risiko,BOOLEAN,Riwayat preeklamsia pada keluarga.
+chronic_hypertension,Riwayat Penyakit,BOOLEAN,Riwayat hipertensi kronis.
+preexisting_diabetes,Riwayat Penyakit,BOOLEAN,Diabetes sebelum kehamilan.
+gestational_diabetes,Riwayat Penyakit,BOOLEAN,Diabetes gestasional sintetis.
+kidney_disease,Riwayat Penyakit,BOOLEAN,Riwayat penyakit ginjal.
+sle,Riwayat Penyakit,BOOLEAN,Riwayat SLE.
+aps,Riwayat Penyakit,BOOLEAN,Riwayat antiphospholipid syndrome.
+visit_id,Kunjungan ANC,VARCHAR,ID kunjungan.
+visit_date,Kunjungan ANC,DATE,Tanggal ANC.
+visit_number,Kunjungan ANC,INTEGER,Urutan kunjungan.
+anc_visit_count,Kunjungan ANC - turunan,INTEGER,Total kunjungan pada episode sintetis.
+gestational_age_weeks,Kunjungan ANC,DECIMAL,Usia kehamilan saat ANC.
+trimester,Kunjungan ANC - turunan,CATEGORY,Trimester dari usia kehamilan.
+weight_kg,Antropometri,DECIMAL,Berat pada kunjungan.
+current_bmi,Antropometri - turunan,DECIMAL,IMT pada kunjungan.
+weight_change_kg,Antropometri - turunan,DECIMAL,Perubahan BB dari kunjungan sebelumnya.
+lila_cm,ANC 10T,DECIMAL,Lingkar lengan atas.
+iron_tablets_given,ANC 10T,BOOLEAN,Pemberian tablet tambah darah.
+iron_tablet_count,ANC 10T,INTEGER,Jumlah tablet tambah darah.
+systolic_bp,Tekanan Darah,INTEGER,Tekanan darah sistolik mmHg.
+diastolic_bp,Tekanan Darah,INTEGER,Tekanan darah diastolik mmHg.
+map_mmhg,Tekanan Darah - turunan,DECIMAL,Mean arterial pressure.
+systolic_change,Tekanan Darah - turunan,INTEGER,Perubahan SBP dari kunjungan sebelumnya.
+diastolic_change,Tekanan Darah - turunan,INTEGER,Perubahan DBP dari kunjungan sebelumnya.
+edema_present,Gejala/Tanda,BOOLEAN,Ada/tidak edema.
+edema_location,Gejala/Tanda,CATEGORY,Lokasi edema jika ada.
+edema_persistent,Gejala/Tanda,BOOLEAN,Edema menetap jika dinilai.
+headache,Gejala/Tanda,BOOLEAN,Sakit kepala.
+visual_disturbance,Gejala/Tanda,BOOLEAN,Gangguan penglihatan.
+epigastric_pain,Gejala/Tanda,BOOLEAN,Nyeri ulu hati.
+dyspnea,Gejala/Tanda,BOOLEAN,Sesak napas.
+proteinuria_examined,Laboratorium,BOOLEAN,Apakah protein urine diperiksa.
+proteinuria_result,Laboratorium,CATEGORY,Tidak diperiksa/Negatif/Trace/+1/+2/+3.
+hemoglobin_g_dl,Laboratorium,DECIMAL,Hb jika diperiksa.
+blood_glucose_mg_dl,Laboratorium,INTEGER,Gula darah jika diperiksa.
+platelet_count,Laboratorium,INTEGER,Trombosit jika diperiksa.
+creatinine_mg_dl,Laboratorium,DECIMAL,Kreatinin jika diperiksa.
+ast_u_l,Laboratorium,INTEGER,AST jika diperiksa.
+alt_u_l,Laboratorium,INTEGER,ALT jika diperiksa.
+tfu_cm,Obstetri/Janin,DECIMAL,Tinggi fundus uteri jika sesuai usia kehamilan.
+fetal_presentation,Obstetri/Janin,CATEGORY,Presentasi janin.
+fetal_heart_rate_bpm,Obstetri/Janin,INTEGER,Denyut jantung janin.
+tetanus_immunization_status,ANC 10T,CATEGORY,Status imunisasi tetanus sintetis.
+td_immunization_given,ANC 10T,BOOLEAN,Imunisasi Td diberikan atau tidak.
+counseling_given,ANC 10T,BOOLEAN,Temu wicara/konseling diberikan.
+management_given,ANC 10T,BOOLEAN,Ada/tidak tatalaksana pada kunjungan.
+screening_risk_category,Skrining,CATEGORY,Kategori risiko sintetis untuk demonstrasi dashboard.
+suspected_preeclampsia,Skrining,BOOLEAN,Dugaan PE pada kunjungan berdasarkan kombinasi data sintetis.
+referral_status,Rujukan,CATEGORY,Dirujuk/tidak dirujuk.
+referral_reason,Rujukan,TEXT,Alasan rujukan sintetis.
+status_at_visit,Diagnosis Temporal,CATEGORY,Status pada waktu kunjungan: Belum PE/PE terdiagnosis/Non-PE.
+final_diagnosis,Target,CATEGORY,Target utama: Preeklamsia atau Non-preeklamsia.
+diagnosis_date,Target,DATE,Tanggal diagnosis PE untuk kasus positif.
+eclampsia,Komplikasi,BOOLEAN,Eklampsia jika ada.
+hellp,Komplikasi,BOOLEAN,HELLP jika ada.
+delivery_date,Persalinan,DATE,Tanggal persalinan.
+gestational_age_delivery,Persalinan,DECIMAL,Usia kehamilan saat persalinan.
+delivery_mode,Persalinan,CATEGORY,Vaginal/Sesar.
+delivery_complication,Persalinan,BOOLEAN,Ada/tidak komplikasi persalinan.
+postpartum_hemorrhage,Persalinan,BOOLEAN,Perdarahan pascapersalinan.
+maternal_intensive_care,Persalinan,BOOLEAN,Perawatan intensif ibu.
+maternal_status_discharge,Persalinan,CATEGORY,Status ibu saat keluar.
+postpartum_systolic_bp,Pascapersalinan,INTEGER,SBP pascapersalinan sintetis.
+postpartum_diastolic_bp,Pascapersalinan,INTEGER,DBP pascapersalinan sintetis.
+postpartum_complication,Pascapersalinan,BOOLEAN,Komplikasi pascapersalinan.
+postpartum_hypertension_status,Pascapersalinan,BOOLEAN,Status hipertensi pascapersalinan sintetis.
+baby_count,Bayi,INTEGER,Jumlah bayi pada episode; 1 atau 2.
+baby_sex,Bayi,CATEGORY,Jenis kelamin bayi representatif untuk file analitik tunggal.
+birth_weight_g,Bayi,INTEGER,Berat lahir bayi representatif.
+birth_length_cm,Bayi,DECIMAL,Panjang lahir.
+apgar_1min,Bayi,INTEGER,APGAR 1 menit.
+apgar_5min,Bayi,INTEGER,APGAR 5 menit.
+birth_status,Bayi,CATEGORY,Lahir hidup/lahir mati.
+nicu_admission,Bayi,BOOLEAN,Perawatan NICU.
+neonatal_complication,Bayi,BOOLEAN,Komplikasi neonatal.
+bblr_status,Bayi - turunan,BOOLEAN,Diturunkan dari berat lahir.
+prematurity_status,Bayi - turunan,BOOLEAN,Diturunkan dari usia kehamilan saat persalinan.
+facility_district,Fasilitas,CATEGORY,Kecamatan fasilitas kesehatan.
+facility_regency,Fasilitas,CATEGORY,Kabupaten fasilitas kesehatan.
+history_id,Riwayat Obstetri,VARCHAR,ID catatan riwayat maternal untuk pemetaan database relasional.
+screening_id,Skrining,VARCHAR,ID skrining setiap kunjungan.
+screening_date,Skrining,DATE,Tanggal skrining.
+screening_notes,Skrining,TEXT,Catatan skrining sintetis.
+referral_id,Rujukan,VARCHAR,ID rujukan jika pasien dirujuk.
+referral_date,Rujukan,DATE,Tanggal rujukan.
+destination_facility_id,Rujukan,VARCHAR,ID fasilitas tujuan.
+destination_facility_name,Rujukan,VARCHAR,Nama fasilitas tujuan.
+outcome_id,Target/Outcome,VARCHAR,ID outcome kehamilan.
+diagnosis_source,Target/Outcome,CATEGORY,Sumber diagnosis sintetis.
+delivery_id,Persalinan,VARCHAR,ID episode persalinan.
+delivery_facility_id,Persalinan,VARCHAR,ID fasilitas persalinan.
+delivery_facility_name,Persalinan,VARCHAR,Nama fasilitas persalinan.
+delivery_complication_type,Persalinan,TEXT,Jenis komplikasi persalinan jika ada.
+postpartum_visit_id,Pascapersalinan,VARCHAR,ID kunjungan nifas sintetis.
+postpartum_visit_date,Pascapersalinan,DATE,Tanggal kunjungan nifas sintetis.
+postpartum_symptoms,Pascapersalinan,TEXT,Gejala/kondisi yang dicatat pada nifas.
+postpartum_complication_type,Pascapersalinan,TEXT,Jenis komplikasi pascapersalinan.
+postpartum_referral,Pascapersalinan,BOOLEAN,Rujukan pascapersalinan.
+baby_id,Bayi,VARCHAR,ID bayi sintetis.
+birth_order,Bayi,INTEGER,Urutan kelahiran bayi.
+baby_record_scope,Bayi,TEXT,Menjelaskan bahwa file datar hanya memuat bayi pertama/representatif; database relasional seharusnya satu baris per bayi.
+counseling_topic,ANC 10T,TEXT,Topik konseling/temu wicara.
+management_notes,ANC 10T,TEXT,Ringkasan tatalaksana pada kunjungan.
